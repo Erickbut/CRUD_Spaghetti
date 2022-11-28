@@ -37,7 +37,7 @@ const postUser = (req,res) => {
 }
 
 const patchUser = (req,res) => {
-  const id = req.params.id
+  const id = req.params.id;
   const { first_name, last_name, email, password, birthday } = req.body
   userControllers.updateUser(id, { first_name, last_name, email, password, birthday })
     .then((data) => {
@@ -52,7 +52,7 @@ const patchUser = (req,res) => {
     })
 }
 
-const deleteUser = (req, user) => {
+const deleteUser = (req, res) => {
   const id = req.params.id
   userControllers.deleteUser(id)
     .then(data => {

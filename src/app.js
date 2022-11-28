@@ -6,7 +6,7 @@ const UsersRouter = require('./users/users.router')
 
 const app = express();
 
-const port = 9000
+const port = 9000;
 
 db.authenticate()
 .then(() => {
@@ -33,6 +33,6 @@ app.get("/", (req, res) => {
 
 app.use('/api/v1', UsersRouter)
 
-app.listen(() => {
+app.listen(port,() => {
     console.log(`Server started at port ${port}`)
 })

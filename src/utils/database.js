@@ -9,5 +9,4 @@ const db = new Sequelize({
   database: 'CRUD'
 })
 
-
 module.exports = db
